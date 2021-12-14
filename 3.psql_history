@@ -1,0 +1,98 @@
+SELECT * FROM pg_class;
+SELECT * FROM pg_class;
+\q
+SELECT * FROM pg_class;
+SELECT * FROM pg_class;
+SELECT * FROM pg_class;
+SELECT * FROM pg_class;
+\q
+ALTER ROLE postgres WITH password 'password';
+\q
+CREATE DATABASE db;
+\q
+/d
+\d
+\dd
+\dt
+\l
+CREATE DATABASE lab03-var01;
+CREATE DATABASE lab03-var01;
+CREATE DATABASE lab03_var01;
+\l
+\q
+/q
+\q
+CREATE DATABASE test;
+create ROLE user;
+create USER  user WITH SUPERUSER;
+create USER  'user' WITH SUPERUSER;
+create USER  "user" WITH SUPERUSER;
+ALTER USER  "user" WITH PASSWORD;
+ALTER DATABASE test OWNER TO "user";
+/c uSeR/c user;
+/c user;
+\c "user"  
+\c test "user"  
+clesrclesr;
+clesr;
+clear;
+SELECT oid, spcname, usename FROM pg_tablespace JOIN pg_user ON usesysid = spcnower;
+SELECT oid, spcname, usename FROM pg_tablespace JOIN pg_user ON usesysid = spcnower|;
+SELECT oid, spcname, usename FROM pg_tablespace JOIN pg_user ON usesysid = spcowner|;
+SELECT oid, spcname, usename FROM pg_tablespace JOIN pg_user ON usesysid = spcowner;
+CREATE TABLESPACE space1 OWNER "user" LOCATIN '/User/user/Document/space1';
+ls;
+\c test "user"  
+CREATE TABLESPACE space1 OWNER "user" LOCATIN '/root/sp';
+CREATE TABLESPACE space1 OWNER "user" LOCATION '/root/sp';
+CREATE TABLESPACE space1 OWNER "user" LOCATION '/home/postgres/ps';
+CREATE TABLESPACE space1 OWNER "user" LOCATION '/home/postgres/ps1';
+CREATE TABLESPACE space2 OWNER "user" LOCATION '/home/postgres/ps1';
+CREATE TABLESPACE space3 OWNER "user" LOCATION '/home/postgres/ps2';
+SELECT oid, spcname, usename FROM pg_tablespace JOIN pg_user ON usesysid = spcowner;
+create table tabl1 (x integer) tablespace space1;
+create table tabl2 (y integer) tablespace space2;
+create table tabl3 (z integer) tablespace space3;
+SELECT tablename, tableowner, tablespace FROM pg_tables WHERE schemaname = 'public';
+CREATE TABLESPACE space4 OWNER "user" LOCATION '/home/postgres/ps3';
+DROP TABLE  tabl1;
+DROP TABLE  tabl2;
+DROP TABLE  tabl3;
+SELECT tablename, tableowner, tablespace FROM pg_tables WHERE schemaname = 'public';
+\c test "user"  
+create table tabl1 (x integer) tablespace space1;
+create table tabl2 (y integer) tablespace space2;
+create table tabl3 (z integer);
+SELECT tablename, tableowner, tablespace FROM pg_tables WHERE schemaname = 'public';
+SELECT tablename, tableowner, tablespace FROM pg_tables WHERE schemaname = 'public';
+create table tabl3 (z integer)
+\
+\q
+\c test "user"  
+ALTER TABLE tabl3 SET TABLESPACE space3;
+SELECT tablename, tableowner, tablespace FROM pg_tables WHERE schemaname = 'public';
+\c test "user"  
+\db+
+INSERT INTO tabl1 (x) SELECT random() * 100 FROM generate_series(1, 1000);
+INSERT INTO tabl2 (y) SELECT random() * 100 FROM generate_series(1, 10000);
+INSERT INTO tabl3 (z) SELECT random() * 100 FROM generate_series(1, 100000);
+SELECT relname, n_tup_ins FROM pg_stat_user_tables ORDER BY relname;
+SELECT spcname, pg_size_pretty(pg_tablespace_size(spcname)) FROM pg_tablespace ORDER BY spcname;
+ALTER TABLE tabl2 SET TABLESPACE space1;
+ALTER TABLE tabl3 SET TABLESPACE space1;
+SELECT spcname, pg_size_pretty(pg_tablespace_size(spcname)) FROM pg_tablespace ORDER BY spcname;
+SELECT relfilenode, tablenade, tableowner, tablespace FROM pg_tables JOIN pg_class ON tablename = relname WHERE schemaname = 'public';
+SELECT relfilenode, tablename, tableowner, tablespace FROM pg_tables JOIN pg_class ON tablename = relname WHERE schemaname = 'public';
+ALTER TABLE tabl1 SET TABLESPACE pg_default;
+ALTER TABLE tabl2 SET TABLESPACE pg_default;
+ALTER TABLE tabl3 SET TABLESPACE pg_default;
+SELECT spcname, pg_size_pretty(pg_tablespace_size(spcname)) FROM pg_tablespace ORDER BY spcname;
+DROP TABLESPACE space1;
+DROP TABLESPACE space2;
+DROP TABLESPACE space3;
+SELECT relfilenode, tablenade, tableowner, tablespace FROM pg_tables JOIN pg_class ON tablename = relname WHERE schemaname = 'public';
+SELECT relfilenode, tablename, tableowner, tablespace FROM pg_tables JOIN pg_class ON tablename = relname WHERE schemaname = 'public';
+DROP TABLE tabl1;
+DROP TABLE tabl2;
+DROP TABLE tabl3;
+SELECT relfilenode, tablename, tableowner, tablespace FROM pg_tables JOIN pg_class ON tablename = relname WHERE schemaname = 'public';
