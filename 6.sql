@@ -1,0 +1,1 @@
+ALTER TABLE tabl3 SET TABLESPACE space3;
