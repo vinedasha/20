@@ -1,0 +1,3 @@
+ALTER TABLE tabl1 SET TABLESPACE pg_default;
+ALTER TABLE tabl2 SET TABLESPACE pg_default;
+ALTER TABLE tabl3 SET TABLESPACE pg_default;
